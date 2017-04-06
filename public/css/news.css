@@ -1,0 +1,125 @@
+/*清除浮动*/
+.cf::before,
+.cf::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*因为想使用rem的字体。
+	浏览器默认的字号是16px
+	16px * 0.625 = 10px
+	这里设置为62.5%  
+	这样0.1rem = 1px;*/
+html{
+	font-size: 62.5%;
+	font-family: arial;
+	height: 100%;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+/*导航*/
+header{
+	background: #4182f1 url(../img/bg-news-logo_344ce44.png) no-repeat center 30%;
+    background-size: 7rem;
+}
+
+header a{
+    display: block;
+    color: #fff;
+    height: 4.8rem;
+    line-height: 4.8rem;
+    margin: 0 1rem;
+}
+
+/*导航两侧图标*/
+header a:nth-child(1),
+header a:nth-child(2){
+	float: left;
+}
+
+header a:nth-child(3),
+header a:nth-child(4){
+   float: right;
+}
+/*导航的字体*/
+header a .iconfont{
+	font-size: 2rem;
+}
+
+nav{
+	background-color: #4182f1;
+}
+
+/*选项*/
+nav ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0px;
+}
+
+nav ul li{
+	display: inline-block;
+	font-size: 1.44rem;
+	text-align: center;
+}
+
+nav a{
+	display: inline-block;
+	padding: 1rem 0;
+	color: #fff;
+	
+
+}
+
+nav i{
+	display: inline-block;
+	height: 2rem;
+    float: right;
+	border-right: 0.1rem solid #5dabf0;
+	position: relative;
+	top: 0.8rem;
+}
+
+.news-lists{
+	padding: 0 1.3rem;
+	margin: 1rem 0 0;
+	list-style: none;
+	
+}
+
+.news-lists h1{
+	font-size: 1.3rem;
+}
+
+.news-list{
+	display: flex;
+	border-bottom: 1px solid #e6e6e6;
+	margin-top: 1rem;
+}
+.newsimg{
+	flex: 1;
+}
+.newscontent{
+	flex: 2;
+	padding:0 0.8rem;
+}
+
+.newscontent span{
+	display: inline-block;
+}
+.newscontent span:nth-child(2){
+	margin-left: 0.8rem;
+	border: 1px solid #ff0000;
+	border-radius: 3px;
+	color: #ff0000;
+}
+
+
+
+

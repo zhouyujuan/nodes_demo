@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- 手机的适配 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <title>百度新闻</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/news.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="cf">
+            <a href="#" class="logo"><span class="iconfont">&#xe605;</span></a>
+            <a href="#" class="user"><span class="iconfont">&#xe637;</span></a>
+            <a href="#" class="search"><span class="iconfont">&#xe600;</span></a>
+            <a href="#" class="add"><span class="iconfont">&#xe636;</span></a>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">精选</a><i></i></li>
+                <li><a href="#">百家</a><i></i></li>
+                <li><a href="#">本地</a><i></i></li>
+                <li><a href="#">娱乐</a><i></i></li>
+                <li><a href="#">社会</a><i></i></li>
+                <li><a href="#">军事</a><i></i></li>
+                <li><a href="#">女人</a><i></i></li>
+                <li><a href="#">搞笑</a><i></i></li>
+                <li><a href="#">互联网</a><i></i></li>
+                <li><a href="#">科技</a><i></i></li>
+                <li><a href="#">更多</a></li>
+            </ul>
+        </nav>
+        <article>
+            <ul class="news-lists">
+               <!--  <li class="news-list">
+                    <div class="newsimg">
+                        <img src="img/news.jpg" width="100%">
+                    </div>
+                    <div class="newscontent">
+                        <h1>习近平：所有扶贫地区的领导干部都要坚守岗位</h1>
+                        <p><span class="newstime">2017-03-09</span><span class="newssrc">青年报</span></p>
+                    </div>
+                </li> -->
+            </ul>
+        </article>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var deviceWidth = $('body').width();
+        $('nav li').each(function(index, item) {
+            if ($(this).find('a').html().split('').length > 2) {
+                $(this).width(deviceWidth / 3);
+            } else {
+                $(this).width(deviceWidth / 6);
+            }
+        })
+    })
+    </script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/news.js"></script>
+</body>
+
+</html>
